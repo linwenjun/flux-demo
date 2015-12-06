@@ -7,3 +7,12 @@ gulp.task('connect', function() {
     livereload: true
   })
 })
+
+gulp.task('html', function() {
+  gulp.src('index.html')
+    .pipe(connect.reload());
+})
+
+gulp.task('watch', function() {
+  gulp.watch(['assets/scripts/*.js'], ['html']);
+})

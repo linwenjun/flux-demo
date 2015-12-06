@@ -4,3 +4,5 @@ require('./gulp')([
   'browserify',
   'connect'
 ])
+
+gulp.task('default', ['connect', 'watch']);
