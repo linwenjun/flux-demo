@@ -8,7 +8,7 @@ gulp.task('browserify', function() {
     debug: true
   }
 
-  browserify({opt})
+  return browserify(opt)
     .transform('babelify', {'presets': ['es2015', 'react']})
     .bundle()
     .pipe(source('app.js'))
